@@ -1,20 +1,22 @@
-// pages/_app.tsx
-import React from 'react';
+// src/pages/_app.tsx
 import { AppProps } from 'next/app';
+import { Refine, AuthBindings } from '@refinedev/core';
 import { Auth0Provider } from '@auth0/auth0-react';
-import { Refine } from '@refinedev/core';
-import authProvider from '../src/providers/authProvider';
+import { RefineKbarProvider } from '@refinedev/kbar';
+import authProvider from 'src/providers/authProvider';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <Auth0Provider
-      domain="dev-xm5uyt11wa8my2yg.us.auth0.com"
-      clientId="VxkC5MaIgsC2FiRApgTHeuk3CKVTzCJA"
+      domain={process.env.NEXT_PUBLIC_AUTH0_DOMAIN}
+      clientId={process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID}
       redirectUri={typeof window !== 'undefined' && window.location.origin}
     >
-      <Refine authProvider={authProvider}>
-        <Component {...pageProps} />
-      </Refine>
+      <RefineKbarProvider>
+        <Refine authProvider={authProvider}>
+          <Component {...pageProps} />
+        </Refine>
+      </RefineKbarProvider>
     </Auth0Provider>
   );
 };

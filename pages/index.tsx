@@ -1,15 +1,19 @@
-// pages/index.tsx
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
+import { Authenticated } from "@pankod/refine-core";
+import { Layout, Header, Sider, Footer } from "@pankod/refine-antd";
 
-const Home = () => {
-  const router = useRouter();
-
-  useEffect(() => {
-    router.push('/admin/login');
-  }, [router]);
-
-  return null;
+const AdminPage = () => {
+  return (
+    <Authenticated>
+      <Layout>
+        <Header>Admin Panel</Header>
+        <Layout>
+          <Sider>Sider Content</Sider>
+          <Layout.Content>Main Content</Layout.Content>
+        </Layout>
+        <Footer>Footer</Footer>
+      </Layout>
+    </Authenticated>
+  );
 };
 
-export default Home;
+export default AdminPage;
