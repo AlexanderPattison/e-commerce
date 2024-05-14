@@ -8,8 +8,8 @@ import authProvider from '../src/providers/authProvider';
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <Auth0Provider
-      domain="YOUR_DOMAIN"
-      clientId="YOUR_CLIENT_ID"
+      domain="dev-xm5uyt11wa8my2yg.us.auth0.com"
+      clientId="VxkC5MaIgsC2FiRApgTHeuk3CKVTzCJA"
       redirectUri={typeof window !== 'undefined' && window.location.origin}
     >
       <Refine authProvider={authProvider}>
