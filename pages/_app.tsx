@@ -1,6 +1,6 @@
 // src/pages/_app.tsx
 import { AppProps } from 'next/app';
-import { Refine, AuthBindings } from '@refinedev/core';
+import { Refine } from '@refinedev/core';
 import { Auth0Provider } from '@auth0/auth0-react';
 import { RefineKbarProvider } from '@refinedev/kbar';
 import authProvider from '../src/providers/authProvider';
