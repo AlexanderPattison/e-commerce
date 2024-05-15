@@ -1,51 +1,43 @@
-import React from 'react';
-import { NextPage } from 'next';
-import { Container, Typography, Grid, Card, CardContent, CardMedia, Button } from '@mui/material';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'; // Importing a shopping cart icon from MUI
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
-const HomePage: NextPage = () => {
-    const products = [
-        { id: 1, name: 'Product 1', description: 'This is product 1', imageUrl: '/images/product1.jpg', price: '$10' },
-        { id: 2, name: 'Product 2', description: 'This is product 2', imageUrl: '/images/product2.jpg', price: '$20' },
-        // Add more products as needed
-    ];
+const Home = () => {
+    const router = useRouter();
+    const [user, setUser] = useState(null);
+
+    useEffect(() => {
+        // Fetch user data to check if the user is logged in
+        const fetchUser = async () => {
+            const res = await fetch('/api/user'); // Adjust this endpoint based on your new setup
+            if (res.ok) {
+                const userData = await res.json();
+                setUser(userData);
+            } else {
+                setUser(null);
+            }
+        };
+
+        fetchUser();
+    }, []);
+
+    const handleLogout = async () => {
+        await fetch('/logout', { method: 'POST' });
+        router.push('/login');
+    };
 
     return (
-        <Container>
-            <Typography variant="h2" component="h1" gutterBottom>
-                Welcome to Our E-Commerce Store
-            </Typography>
-            <Grid container spacing={4}>
-                {products.map(product => (
-                    <Grid item key={product.id} xs={12} sm={6} md={4}>
-                        <Card>
-                            <CardMedia
-                                component="img"
-                                alt={product.name}
-                                height="140"
-                                image={product.imageUrl}
-                                title={product.name}
-                            />
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="h2">
-                                    {product.name}
-                                </Typography>
-                                <Typography variant="body2" color="textSecondary" component="p">
-                                    {product.description}
-                                </Typography>
-                                <Typography variant="h6" component="p">
-                                    {product.price}
-                                </Typography>
-                            </CardContent>
-                            <Button size="small" color="primary" startIcon={<ShoppingCartIcon />}>
-                                Add to Cart
-                            </Button>
-                        </Card>
-                    </Grid>
-                ))}
-            </Grid>
-        </Container>
+        <div>
+            <h1>Welcome to the E-commerce App</h1>
+            {user ? (
+                <div>
+                    <p>Welcome, {user.username}!</p>
+                    <button onClick={handleLogout}>Logout</button>
+                </div>
+            ) : (
+                <button onClick={() => router.push('/login')}>Login</button>
+            )}
+        </div>
     );
 };
 
-export default HomePage;
+export default Home;
