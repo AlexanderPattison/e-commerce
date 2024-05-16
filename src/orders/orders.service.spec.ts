@@ -1,6 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { OrdersService } from './orders.service';
 import { NotFoundException } from '@nestjs/common';
+import { CreateOrderDto } from './dto/create-order.dto';
 
 describe('OrdersService', () => {
     let service: OrdersService;
@@ -19,7 +20,7 @@ describe('OrdersService', () => {
 
     describe('create', () => {
         it('should create an order', () => {
-            const createOrderDto = { product: 'Product A', quantity: 2 };
+            const createOrderDto: CreateOrderDto = { product: 'Product A', quantity: 2, userId: 1 };
             const order = service.create(createOrderDto);
             expect(order).toMatchObject(createOrderDto);
             expect(order).toHaveProperty('id');
@@ -35,7 +36,7 @@ describe('OrdersService', () => {
 
     describe('findOne', () => {
         it('should find an order by id', () => {
-            const createOrderDto = { product: 'Product A', quantity: 2 };
+            const createOrderDto: CreateOrderDto = { product: 'Product A', quantity: 2, userId: 1 };
             const order = service.create(createOrderDto);
             const foundOrder = service.findOne(order.id);
             expect(foundOrder).toEqual(order);
@@ -48,7 +49,7 @@ describe('OrdersService', () => {
 
     describe('update', () => {
         it('should update an order', () => {
-            const createOrderDto = { product: 'Product A', quantity: 2 };
+            const createOrderDto: CreateOrderDto = { product: 'Product A', quantity: 2, userId: 1 };
             const order = service.create(createOrderDto);
             const updateOrderDto = { product: 'Product B', quantity: 3 };
             const updatedOrder = service.update(order.id, updateOrderDto);
@@ -62,7 +63,7 @@ describe('OrdersService', () => {
 
     describe('remove', () => {
         it('should remove an order', () => {
-            const createOrderDto = { product: 'Product A', quantity: 2 };
+            const createOrderDto: CreateOrderDto = { product: 'Product A', quantity: 2, userId: 1 };
             const order = service.create(createOrderDto);
             const removedOrder = service.remove(order.id);
             expect(removedOrder).toEqual([order]);

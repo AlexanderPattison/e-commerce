@@ -7,4 +7,7 @@ export class CreateOrderDto {
 
     @IsInt()
     readonly quantity: number;
+
+    @IsInt()
+    readonly userId: number;
 }
