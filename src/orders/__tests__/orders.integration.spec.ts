@@ -2,7 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { OrdersService } from '../orders.service';
 import { UsersService } from '../../users/users.service';
 import { NotFoundException } from '@nestjs/common';
-import { CreateOrderDto } from '../../orders/dto/create-order.dto';
+import { CreateOrderDto } from '../dto/create-order.dto';
 
 describe('OrdersService Integration', () => {
     let service: OrdersService;
@@ -11,7 +11,7 @@ describe('OrdersService Integration', () => {
     const mockUser = { id: 1, name: 'User A', email: 'user@example.com' };
 
     beforeEach(async () => {
-        const module: TestingModule = await Test.createTestingModule({
+        const testingModule: TestingModule = await Test.createTestingModule({
             providers: [
                 OrdersService,
                 {
@@ -23,8 +23,11 @@ describe('OrdersService Integration', () => {
             ],
         }).compile();
 
-        service = module.get<OrdersService>(OrdersService);
-        usersService = module.get<UsersService>(UsersService);
+        service = testingModule.get<OrdersService>(OrdersService);
+        usersService = testingModule.get<UsersService>(UsersService);
+
+        // Clear the orders array before each test
+        service['orders'] = [];
     });
 
     it('should be defined', () => {

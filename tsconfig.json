@@ -1,27 +1,36 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [ "dom", "dom.iterable", "esnext" ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "baseUrl": "./",
-    "paths": {
-      "@*": [ "./src/*" ],
-      "@pages/*": [ "./pages/*" ]
-    }
+    "target": "ES2018", // Specify ECMAScript target version
+    "module": "commonjs", // Specify module code generation
+    "lib": [ "ESNext" ], // Specify library files to be included
+    "allowJs": true, // Allow JavaScript files to be compiled
+    "declaration": true, // Generates corresponding '.d.ts' file
+    "declarationMap": true, // Generates a sourcemap for each corresponding '.d.ts' file
+    "sourceMap": true, // Generates corresponding '.map' file
+    "outDir": "./dist", // Redirect output structure to the directory
+    "rootDir": "./src", // Specify the root directory of input files
+    "strict": true, // Enable all strict type-checking options
+    "moduleResolution": "node", // Specify module resolution strategy
+    "esModuleInterop": true, // Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file
+    "types": [ "node", "jest" ], // Specify type definitions to be included
+    "resolveJsonModule": true, // Include modules imported with '.json' extension
+    "noImplicitReturns": true, // Report error when not all code paths in function return a value
+    "noUnusedLocals": true, // Report errors on unused local variables
+    "noUnusedParameters": true, // Report errors on unused parameters
+    "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statement
+    "experimentalDecorators": true, // Enable experimental support for decorators
+    "emitDecoratorMetadata": true // Enable emitting decorator metadata
   },
-  "include": [ "next-env.d.ts", "**/*.ts", "**/*.tsx" ],
-  "exclude": [ "node_modules", "cypress", "dist" ]
+  "include": [
+    "src/**/*.ts", // Include all TypeScript files in the src directory
+    "src/**/*.spec.ts", // Include all test spec files
+    "test/**/*.ts" // Include all TypeScript files in the test directory
+  ],
+  "exclude": [
+    "node_modules", // Exclude node_modules directory
+    "dist", // Exclude dist directory
+    "**/*.js" // Exclude all JavaScript files
+  ]
 }
