@@ -1,13 +1,6 @@
-import { IsString, IsInt, IsNotEmpty } from 'class-validator';
-
+// src/dto/create-order.dto.ts
 export class CreateOrderDto {
-    @IsString()
-    @IsNotEmpty()
-    readonly product: string;
-
-    @IsInt()
-    readonly quantity: number;
-
-    @IsInt()
-    readonly userId: number;
+    product: string;
+    quantity: number;
+    userId: number;
 }

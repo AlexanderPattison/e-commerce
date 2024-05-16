@@ -2,13 +2,13 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { OrdersService } from '../orders.service';
 import { UsersService } from '../../users/users.service';
 import { NotFoundException } from '@nestjs/common';
-import { CreateOrderDto } from '../dto/create-order.dto';
+import { CreateOrderDto } from '../../orders/dto/create-order.dto';
 
 describe('OrdersService Integration', () => {
     let service: OrdersService;
     let usersService: UsersService;
 
-    const mockUser = { id: 1, name: 'User A', email: 'usera@example.com' };
+    const mockUser = { id: 1, name: 'User A', email: 'user@example.com' };
 
     beforeEach(async () => {
         const module: TestingModule = await Test.createTestingModule({
