@@ -2,7 +2,9 @@
   "compilerOptions": {
     "target": "ES2018", // Specify ECMAScript target version
     "module": "commonjs", // Specify module code generation
-    "lib": [ "ESNext" ], // Specify library files to be included
+    "lib": [
+      "ESNext"
+    ], // Specify library files to be included
     "allowJs": true, // Allow JavaScript files to be compiled
     "declaration": true, // Generates corresponding '.d.ts' file
     "declarationMap": true, // Generates a sourcemap for each corresponding '.d.ts' file
@@ -14,7 +16,10 @@
     "esModuleInterop": true, // Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports
     "skipLibCheck": true, // Skip type checking of declaration files
     "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file
-    "types": [ "node", "jest" ], // Specify type definitions to be included
+    "types": [
+      "node",
+      "jest"
+    ], // Specify type definitions to be included
     "resolveJsonModule": true, // Include modules imported with '.json' extension
     "noImplicitReturns": true, // Report error when not all code paths in function return a value
     "noUnusedLocals": true, // Report errors on unused local variables
@@ -22,11 +27,23 @@
     "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statement
     "experimentalDecorators": true, // Enable experimental support for decorators
     "emitDecoratorMetadata": true // Enable emitting decorator metadata
+    ,
+    "noEmit": true,
+    "incremental": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "src/**/*.ts", // Include all TypeScript files in the src directory
     "src/**/*.spec.ts", // Include all test spec files
     "test/**/*.ts" // Include all TypeScript files in the test directory
+    ,
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules", // Exclude node_modules directory
