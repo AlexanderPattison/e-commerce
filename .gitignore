@@ -1,4 +1,4 @@
-﻿# LaTeX Files
+# LaTeX Files
 documentation/*.aux
 documentation/*.log
 documentation/*.out
