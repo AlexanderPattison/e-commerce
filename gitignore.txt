@@ -22,7 +22,6 @@ tailwind.config.js
 
 # Various directories used by tools
 coverage/
-.vs/
 .vscode/
 .idea/
 .DS_Store
