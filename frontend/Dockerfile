@@ -1,4 +1,5 @@
-FROM node:18
+# frontend/Dockerfile
+FROM node:18-alpine
 
 WORKDIR /app
 
@@ -10,6 +11,6 @@ COPY . .
 
 RUN npm run build
 
-EXPOSE 3000
+RUN ls -alh .next
 
 CMD ["npm", "start"]
