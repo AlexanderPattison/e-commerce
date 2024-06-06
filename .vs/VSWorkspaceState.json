@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\backend",
+    "\\backend\\src",
+    "\\backend\\src\\products",
+    "\\frontend",
+    "\\frontend\\lib",
+    "\\frontend\\pages",
+    "\\frontend\\pages\\products"
+  ],
+  "SelectedNode": "\\.env.local",
+  "PreviewInSolutionExplorer": false
+}
