@@ -1,14 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\backend",
-    "\\backend\\src",
-    "\\backend\\src\\products",
-    "\\frontend",
-    "\\frontend\\lib",
-    "\\frontend\\pages",
-    "\\frontend\\pages\\products"
+    "\\.husky",
+    "\\public",
+    "\\src",
+    "\\src\\app",
+    "\\src\\store",
+    "\\src\\theme",
+    "\\src\\__tests__"
   ],
-  "SelectedNode": "\\.env.local",
+  "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false
 }
