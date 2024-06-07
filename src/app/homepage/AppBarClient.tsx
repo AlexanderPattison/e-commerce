@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { AppBar, Toolbar, IconButton, Typography, InputBase } from '@mui/material';
-import { Search as SearchIcon, AccountCircle } from '@mui/icons-material';
+import { Search as SearchIcon, AccountCircle, ShoppingCart, Favorite } from '@mui/icons-material';
 import { styled, alpha } from '@mui/material/styles';
 
 const Search = styled('div')(({ theme }) => ({
@@ -55,11 +55,27 @@ const AppBarClient: React.FC = () => {
                         <SearchIcon />
                     </SearchIconWrapper>
                     <StyledInputBase
-                        placeholder="Search…"
+                        placeholder="Search..."
                         inputProps={{ 'aria-label': 'search' }}
                     />
                 </Search>
                 <div style={{ flexGrow: 1 }} />
+                <IconButton
+                    edge="end"
+                    aria-label="cart"
+                    aria-haspopup="true"
+                    color="inherit"
+                >
+                    <ShoppingCart />
+                </IconButton>
+                <IconButton
+                    edge="end"
+                    aria-label="wishlist"
+                    aria-haspopup="true"
+                    color="inherit"
+                >
+                    <Favorite />
+                </IconButton>
                 <IconButton
                     edge="end"
                     aria-label="account of current user"
