@@ -1,14 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\.husky",
-    "\\public",
     "\\src",
     "\\src\\app",
-    "\\src\\store",
-    "\\src\\theme",
-    "\\src\\__tests__"
+    "\\src\\store"
   ],
-  "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false
 }

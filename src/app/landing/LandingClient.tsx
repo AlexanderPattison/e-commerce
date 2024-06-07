@@ -2,13 +2,13 @@
 
 import React from 'react';
 import { Container, Typography, Box, Button } from '@mui/material';
-import { useRouter } from 'next/navigation'; // Use 'next/navigation' for useRouter
+import { useRouter } from 'next/navigation';
 
-const LandingPage: React.FC = () => {
+const LandingClient: React.FC = () => {
     const router = useRouter();
 
     const handleShopNow = () => {
-        router.push('/shop'); // Adjust this path to your shop page
+        router.push('/homepage');
     };
 
     return (
@@ -35,4 +35,4 @@ const LandingPage: React.FC = () => {
     );
 };
 
-export default LandingPage;
+export default LandingClient;
