@@ -1,16 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\nestjs",
-    "\\nextjs",
-    "\\src\\app",
-    "\\src\\app\\landing",
-    "\\src\\components",
-    "\\src\\items",
-    "\\src\\lib",
-    "\\src\\store",
-    "\\src\\theme"
+    "\\frontend"
   ],
-  "SelectedNode": "\\nextjs\\tsconfig.json",
   "PreviewInSolutionExplorer": false
 }
