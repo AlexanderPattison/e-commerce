@@ -1,4 +1,4 @@
-﻿'use client';
+﻿"use client";
 
 import React, { useEffect, useState } from 'react';
 import { AppBar, Toolbar, IconButton, Typography, InputBase } from '@mui/material';
@@ -48,7 +48,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 const CartDropdown = dynamic(() => import('./CartMenu'), { ssr: false });
 
-const AppBarClient: React.FC = () => {
+const AppBarComponent: React.FC = () => {
     const [user, setUser] = useState({ name: '', email: '' });
     const [loading, setLoading] = useState(true);
 
@@ -96,4 +96,4 @@ const AppBarClient: React.FC = () => {
     );
 };
 
-export default AppBarClient;
+export default AppBarComponent;
