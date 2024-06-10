@@ -26,8 +26,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# env file
+# env files
 /backend/.env
+/frontend/.env.local
 
 # visual studio
 .vs

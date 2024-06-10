@@ -1,22 +1,18 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import { Typography } from '@mui/material';
 
-// Dynamically import the AppBarClient component
-const AppBarClient = dynamic(() => import('./AppBarClient'), { ssr: false });
+// Dynamically import the AppBarClient and ProductList components
+const AppBar = dynamic(() => import('../../components/AppBar'), { ssr: false });
+const ProductList = dynamic(() => import('../../components/ProductList'), { ssr: false });
 
-const Homepage: React.FC = () => {
+const HomePage: React.FC = () => {
     return (
         <div>
-            <AppBarClient />
-            <main>
-                <Typography variant="h4" component="h1" gutterBottom>
-                    Welcome to the Homepage
-                </Typography>
-                {/* Add more content here */}
-            </main>
+            <AppBar />
+            <h1>Welcome to the E-Commerce App</h1>
+            <ProductList />
         </div>
     );
 };
 
-export default Homepage;
+export default HomePage;
