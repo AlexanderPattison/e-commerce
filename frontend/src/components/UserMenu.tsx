@@ -3,16 +3,11 @@
 import React, { useState } from 'react';
 import { Menu, MenuItem, IconButton, Typography, Link } from '@mui/material';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { useUser } from '../hooks/use-user';
 
-interface UserMenuProps {
-    user?: {
-        name: string;
-        email: string;
-    };
-}
-
-const UserMenu: React.FC<UserMenuProps> = ({ user }) => {
+const UserMenu: React.FC = () => {
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+    const { user, isLoading } = useUser();
 
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorEl(event.currentTarget);
@@ -21,6 +16,10 @@ const UserMenu: React.FC<UserMenuProps> = ({ user }) => {
     const handleClose = () => {
         setAnchorEl(null);
     };
+
+    if (isLoading) {
+        return null; // or a loading spinner
+    }
 
     return (
         <div>
@@ -50,12 +49,12 @@ const UserMenu: React.FC<UserMenuProps> = ({ user }) => {
                             <Typography variant="body1">Email: {user.email}</Typography>
                         </MenuItem>
                         <MenuItem onClick={handleClose}>
-                            <Link href="/api/auth0/logout">Logout</Link>
+                            <Link href="/api/auth/logout">Logout</Link>
                         </MenuItem>
                     </>
                 ) : (
                     <MenuItem onClick={handleClose}>
-                        <Link href="/api/auth0/login">Login</Link>
+                        <Link href="/api/auth/login">Login</Link>
                     </MenuItem>
                 )}
             </Menu>

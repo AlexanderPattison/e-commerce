@@ -19,6 +19,7 @@ export const useUser = () => {
                 const userData = await response.json();
                 setUser(userData);
             } catch (err) {
+                console.error('Error fetching user profile:', err);
                 setError(err);
             } finally {
                 setIsLoading(false);
