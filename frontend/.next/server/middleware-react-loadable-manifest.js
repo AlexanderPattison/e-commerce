@@ -1,1 +1,0 @@
-self.__REACT_LOADABLE_MANIFEST="{\"components\\\\AppBar.tsx -> ./CartMenu\":{\"id\":\"components\\\\AppBar.tsx -> ./CartMenu\",\"files\":[\"static/chunks/_app-pages-browser_src_components_CartMenu_tsx.js\"]}}"
