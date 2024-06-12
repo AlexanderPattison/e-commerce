@@ -34,7 +34,7 @@ module.exports = require("next/dist/client/components/action-async-storage.exter
 
 /***/ }),
 
-/***/ "../../../client/components/request-async-storage.external":
+/***/ "./request-async-storage.external":
 /*!*****************************************************************************!*\
   !*** external "next/dist/client/components/request-async-storage.external" ***!
   \*****************************************************************************/
@@ -222,7 +222,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, ["vendor-chunks/next","vendor-chunks/@auth0","vendor-chunks/tslib","vendor-chunks/@mui","vendor-chunks/@emotion","vendor-chunks/@reduxjs","vendor-chunks/react-redux","vendor-chunks/immer","vendor-chunks/prop-types","vendor-chunks/stylis","vendor-chunks/reselect","vendor-chunks/redux","vendor-chunks/hoist-non-react-statics","vendor-chunks/use-sync-external-store","vendor-chunks/@babel","vendor-chunks/@swc","vendor-chunks/object-assign","vendor-chunks/redux-thunk"], () => (__webpack_exec__("(rsc)/./node_modules/next/dist/build/webpack/loaders/next-app-loader.js?name=app%2F_not-found%2Fpage&page=%2F_not-found%2Fpage&appPaths=&pagePath=..%2Fnode_modules%2Fnext%2Fdist%2Fclient%2Fcomponents%2Fnot-found-error.js&appDir=C%3A%5CUsers%5Calexp%5Csource%5Crepos%5Ce-commerce%5Cfrontend%5Csrc%5Capp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=C%3A%5CUsers%5Calexp%5Csource%5Crepos%5Ce-commerce%5Cfrontend&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D!")));
+var __webpack_exports__ = __webpack_require__.X(0, ["vendor-chunks/next","vendor-chunks/@swc","vendor-chunks/@auth0","vendor-chunks/tslib","vendor-chunks/@mui","vendor-chunks/@emotion","vendor-chunks/@reduxjs","vendor-chunks/react-redux","vendor-chunks/immer","vendor-chunks/prop-types","vendor-chunks/stylis","vendor-chunks/reselect","vendor-chunks/redux","vendor-chunks/hoist-non-react-statics","vendor-chunks/use-sync-external-store","vendor-chunks/@babel","vendor-chunks/object-assign","vendor-chunks/redux-thunk"], () => (__webpack_exec__("(rsc)/./node_modules/next/dist/build/webpack/loaders/next-app-loader.js?name=app%2F_not-found%2Fpage&page=%2F_not-found%2Fpage&appPaths=&pagePath=..%2Fnode_modules%2Fnext%2Fdist%2Fclient%2Fcomponents%2Fnot-found-error.js&appDir=C%3A%5CUsers%5Calexp%5Csource%5Crepos%5Ce-commerce%5Cfrontend%5Csrc%5Capp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=C%3A%5CUsers%5Calexp%5Csource%5Crepos%5Ce-commerce%5Cfrontend&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D!")));
 module.exports = __webpack_exports__;
 
 })();

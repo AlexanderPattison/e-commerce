@@ -5,7 +5,7 @@ const LoginPage: React.FC = () => {
     return (
         <div>
             <h1>Login</h1>
-            <a href="/api/auth0/login">Click here to login</a>
+            <a href="/api/auth/login">Click here to login</a>
         </div>
     );
 };
